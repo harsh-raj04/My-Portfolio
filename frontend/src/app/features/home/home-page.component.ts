@@ -322,20 +322,94 @@ type ChatMessage = {
           />
         </div>
 
-        <div class="mt-12 grid gap-6 md:grid-cols-3">
+        <div class="mt-12 grid gap-6 xl:grid-cols-[1.12fr_0.88fr]">
           <article
-            *ngFor="let card of content().aboutCards"
             appRevealOnScroll
-            class="reveal-on-scroll group rounded-[1.75rem] border border-slate-200 bg-white/80 p-8 shadow-soft transition duration-300 hover:-translate-y-2 hover:border-sky-300 hover:shadow-2xl dark:border-slate-800 dark:bg-slate-900/80 dark:hover:border-sky-500/60"
+            class="reveal-on-scroll relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white/85 p-8 shadow-soft dark:border-slate-800 dark:bg-slate-900/85"
           >
-            <div
-              class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-slate-950 to-sky-600 text-lg font-bold text-white transition group-hover:scale-110 dark:from-slate-800 dark:to-sky-500"
-            >
-              {{ aboutIcon(card.icon) }}
+            <div class="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-sky-400/18 blur-3xl dark:bg-sky-500/16"></div>
+            <div class="pointer-events-none absolute -bottom-16 left-8 h-40 w-40 rounded-full bg-emerald-400/14 blur-3xl dark:bg-emerald-500/14"></div>
+            <div class="pointer-events-none absolute inset-y-8 right-8 w-px bg-gradient-to-b from-transparent via-sky-300/35 to-transparent dark:via-sky-500/20"></div>
+
+            <div class="relative z-10">
+              <div class="flex flex-wrap items-center gap-3">
+                <span class="rounded-full border border-sky-200 bg-sky-50 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-sky-700 dark:border-sky-500/30 dark:bg-sky-500/10 dark:text-sky-300">
+                  Snapshot
+                </span>
+                <span class="h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_18px_rgba(34,197,94,0.65)]"></span>
+              </div>
+
+              <h3 class="mt-6 max-w-xl font-heading text-4xl font-semibold leading-tight text-slate-950 dark:text-white">
+                Cloud systems, deployment workflows, and full stack product delivery.
+              </h3>
+              <p class="mt-5 max-w-xl text-base leading-8 text-slate-600 dark:text-slate-300">
+                I build cloud-ready applications, automate release pipelines, and turn backend and frontend ideas into practical products.
+              </p>
+
+              <div class="mt-8 flex flex-wrap gap-3">
+                <span
+                  *ngFor="let item of aboutHighlights"
+                  class="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-600 dark:border-slate-700 dark:bg-slate-800/80 dark:text-slate-300"
+                >
+                  {{ item }}
+                </span>
+              </div>
+
+              <div class="mt-8 grid gap-3 sm:grid-cols-3">
+                <div
+                  *ngFor="let item of aboutStats"
+                  class="rounded-[1.35rem] border border-slate-200 bg-white/80 p-4 dark:border-slate-700 dark:bg-slate-950/55"
+                >
+                  <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500">
+                    {{ item.label }}
+                  </p>
+                  <p class="mt-2 text-lg font-semibold text-slate-950 dark:text-white">{{ item.value }}</p>
+                </div>
+              </div>
             </div>
-            <h3 class="mt-8 font-heading text-2xl font-semibold text-slate-950 dark:text-white">{{ card.title }}</h3>
-            <p class="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-300">{{ card.description }}</p>
           </article>
+
+          <div class="grid gap-4">
+            <article
+              *ngFor="let card of content().aboutCards; let i = index"
+              appRevealOnScroll
+              class="reveal-on-scroll group relative overflow-hidden rounded-[1.6rem] border border-slate-200 bg-white/82 p-6 shadow-soft transition duration-300 hover:-translate-y-1.5 hover:border-sky-300 dark:border-slate-800 dark:bg-slate-900/82 dark:hover:border-sky-500/50"
+            >
+              <div
+                class="pointer-events-none absolute -right-10 top-0 h-24 w-24 rounded-full blur-3xl opacity-25"
+                [style.background]="aboutAccent(i)"
+              ></div>
+
+              <div class="relative z-10 flex items-start justify-between gap-4">
+                <div
+                  class="inline-flex h-12 w-12 items-center justify-center rounded-2xl text-lg font-bold text-white shadow-lg transition group-hover:scale-105"
+                  [style.background]="aboutAccent(i)"
+                >
+                  {{ aboutIcon(card.icon) }}
+                </div>
+                <div class="flex gap-1.5 pt-2">
+                  <span
+                    *ngFor="let dot of [0, 1, 2]"
+                    class="h-2 w-2 rounded-full"
+                    [style.background]="aboutAccent(i)"
+                    [style.opacity]="dot === 1 ? 0.95 : 0.35"
+                  ></span>
+                </div>
+              </div>
+
+              <h3 class="mt-5 font-heading text-2xl font-semibold text-slate-950 dark:text-white">{{ card.title }}</h3>
+              <p class="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">{{ card.description }}</p>
+
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span
+                  *ngFor="let chip of aboutCardTags(card.title)"
+                  class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500 dark:border-slate-700 dark:bg-slate-800/70 dark:text-slate-300"
+                >
+                  {{ chip }}
+                </span>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -790,6 +864,12 @@ export class HomePageComponent {
       text: 'Ask me about Harsh Raj, his projects, skills, education, certificates, or contact details.'
     }
   ]);
+  readonly aboutHighlights = ['DevOps', 'Cloud', 'Full Stack', 'Automation'];
+  readonly aboutStats = [
+    { label: 'Focus', value: 'Cloud + CI/CD' },
+    { label: 'Build', value: 'Full Stack Apps' },
+    { label: 'Strength', value: 'Problem Solving' }
+  ];
 
   readonly projectFilters = computed(() => [
     'All',
@@ -885,6 +965,20 @@ export class HomePageComponent {
     };
 
     return icons[type] ?? '•';
+  }
+
+  aboutAccent(index: number) {
+    return ['linear-gradient(135deg, #38BDF8, #3B82F6)', 'linear-gradient(135deg, #34D399, #22C55E)', 'linear-gradient(135deg, #A78BFA, #6366F1)'][index] ?? 'linear-gradient(135deg, #38BDF8, #3B82F6)';
+  }
+
+  aboutCardTags(title: string) {
+    const tags: Record<string, string[]> = {
+      'Cloud & DevOps': ['CI/CD', 'IaC', 'Automation'],
+      'Full Stack Development': ['Frontend', 'Backend', 'APIs'],
+      'Problem Solver': ['DSA', 'Systems', 'Logic']
+    };
+
+    return tags[title] ?? ['Build', 'Ship', 'Scale'];
   }
 
   contactIcon(label: string) {

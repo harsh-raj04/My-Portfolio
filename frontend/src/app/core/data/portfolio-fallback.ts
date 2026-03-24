@@ -30,17 +30,17 @@ export const portfolioContent: PortfolioContent = {
     {
       title: 'Cloud & DevOps',
       icon: 'cloud',
-      description: 'Focus on automation, infrastructure as code, and CI/CD.'
+      description: 'Automation, infrastructure as code, and CI/CD delivery.'
     },
     {
       title: 'Full Stack Development',
       icon: 'code',
-      description: 'Building scalable web apps using modern JS stacks.'
+      description: 'Scalable web apps across frontend, backend, and APIs.'
     },
     {
       title: 'Problem Solver',
       icon: 'brain',
-      description: 'Strong DSA foundation and systems thinking.'
+      description: 'Strong DSA mindset with practical systems thinking.'
     }
   ],
   contactLinks: [
