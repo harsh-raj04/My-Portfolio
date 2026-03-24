@@ -146,7 +146,7 @@ type ChatMessage = {
 
         <div class="landing-intro__content">
           <span class="landing-intro__eyebrow">Harsh Raj • Developer Portfolio</span>
-          <h1 class="landing-intro__title">Welcome to my portfolio</h1>
+          <h1 class="landing-intro__title">Welcome to my Portfolio</h1>
           <p class="landing-intro__copy">
             Cloud automation, DevOps systems, and full stack product work presented as a visual showcase.
           </p>
@@ -296,9 +296,9 @@ type ChatMessage = {
           <div class="absolute inset-0 animate-drift rounded-full bg-gradient-to-br from-sky-500/10 to-emerald-400/10 blur-3xl"></div>
           <div class="relative flex h-[30rem] w-[30rem] items-center justify-center">
             <div class="absolute inset-6 rounded-full bg-gradient-to-br from-sky-500/16 via-transparent to-emerald-400/14 blur-2xl"></div>
-            <div class="absolute inset-8 rounded-full border border-white/12 dark:border-slate-700/40"></div>
+            <div class="absolute inset-8 rounded-full border border-sky-400/25 shadow-[0_0_40px_rgba(56,189,248,0.12)] dark:border-cyan-400/20"></div>
             <div
-              class="relative h-[24rem] w-[24rem] overflow-hidden rounded-full border border-white/60 bg-white/80 p-4 shadow-soft backdrop-blur-xl dark:border-slate-800 dark:bg-slate-900/80"
+              class="relative h-[24rem] w-[24rem] overflow-hidden rounded-full border border-sky-200/70 bg-white/85 p-4 shadow-soft backdrop-blur-xl dark:border-sky-400/35 dark:bg-slate-900/80"
             >
               <div class="h-full w-full overflow-hidden rounded-full bg-slate-950 dark:bg-slate-900">
                 <img
@@ -756,7 +756,11 @@ type ChatMessage = {
         </div>
 
         <button type="button" class="portfolio-chat__toggle" (click)="toggleChat()">
-          <span>{{ chatOpen() ? 'Close' : 'AI Chat' }}</span>
+          <span class="portfolio-chat__toggle-dot"></span>
+          <span class="portfolio-chat__toggle-copy">
+            <strong>{{ chatOpen() ? 'Close Copilot' : 'Portfolio Copilot' }}</strong>
+            <small>{{ chatOpen() ? 'Hide assistant' : 'Ask about Harsh Raj' }}</small>
+          </span>
         </button>
       </div>
     </div>
@@ -766,6 +770,7 @@ export class HomePageComponent {
   private readonly destroyRef = inject(DestroyRef);
   private readonly portfolioApi = inject(PortfolioApiService);
   private readonly scrollService = inject(ScrollService);
+  private readonly introSeenStorageKey = 'harsh-raj-portfolio-intro-seen';
   private introExitTimer?: ReturnType<typeof setTimeout>;
   private introHideTimer?: ReturnType<typeof setTimeout>;
 
@@ -775,9 +780,9 @@ export class HomePageComponent {
   readonly education = signal<EducationEntry[]>([]);
   readonly certificates = signal<Certificate[]>([]);
   readonly selectedFilter = signal('All');
-  readonly showLandingIntro = signal(true);
+  readonly showLandingIntro = signal(!this.hasSeenIntro());
   readonly introClosing = signal(false);
-  readonly heroMotionReady = signal(false);
+  readonly heroMotionReady = signal(this.hasSeenIntro());
   readonly chatOpen = signal(false);
   readonly chatMessages = signal<ChatMessage[]>([
     {
@@ -820,14 +825,17 @@ export class HomePageComponent {
   });
 
   constructor() {
-    this.introExitTimer = setTimeout(() => {
-      this.introClosing.set(true);
-      this.heroMotionReady.set(true);
-    }, 2400);
+    if (this.showLandingIntro()) {
+      this.introExitTimer = setTimeout(() => {
+        this.markIntroSeen();
+        this.introClosing.set(true);
+        this.heroMotionReady.set(true);
+      }, 2400);
 
-    this.introHideTimer = setTimeout(() => {
-      this.showLandingIntro.set(false);
-    }, 3600);
+      this.introHideTimer = setTimeout(() => {
+        this.showLandingIntro.set(false);
+      }, 3600);
+    }
 
     this.destroyRef.onDestroy(() => {
       if (this.introExitTimer) {
@@ -849,6 +857,16 @@ export class HomePageComponent {
         this.education.set(snapshot.education);
         this.certificates.set(snapshot.certificates);
       });
+  }
+
+  private hasSeenIntro() {
+    return typeof window !== 'undefined' && window.sessionStorage.getItem(this.introSeenStorageKey) === 'true';
+  }
+
+  private markIntroSeen() {
+    if (typeof window !== 'undefined') {
+      window.sessionStorage.setItem(this.introSeenStorageKey, 'true');
+    }
   }
 
   scrollTo(sectionId: string) {

@@ -768,8 +768,56 @@ button {
 }
 
 .portfolio-chat__toggle {
-  padding: 0.95rem 1.2rem;
-  box-shadow: 0 18px 40px rgba(59, 130, 246, 0.25);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.95rem 1.1rem 0.95rem 1rem;
+  border-radius: 1.15rem;
+  background:
+    linear-gradient(135deg, rgba(139, 92, 246, 0.96), rgba(59, 130, 246, 0.96)),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02));
+  box-shadow:
+    0 18px 40px rgba(59, 130, 246, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.portfolio-chat__toggle-dot {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 30% 30%, #ffffff, #a5f3fc 38%, #22d3ee 100%);
+  box-shadow:
+    0 0 0 6px rgba(255, 255, 255, 0.08),
+    0 0 20px rgba(125, 211, 252, 0.9);
+  flex-shrink: 0;
+}
+
+.portfolio-chat__toggle-copy {
+  display: grid;
+  text-align: left;
+  line-height: 1.1;
+}
+
+.portfolio-chat__toggle-copy strong {
+  font-size: 0.96rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.portfolio-chat__toggle-copy small {
+  margin-top: 0.18rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.light .portfolio-chat__toggle {
+  background:
+    linear-gradient(135deg, rgba(99, 102, 241, 0.94), rgba(59, 130, 246, 0.92)),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.62));
+  box-shadow:
+    0 18px 42px rgba(59, 130, 246, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
 .portfolio-chat__send:hover,
