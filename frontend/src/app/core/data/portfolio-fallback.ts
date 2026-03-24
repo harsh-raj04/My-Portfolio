@@ -12,7 +12,7 @@ export const portfolioContent: PortfolioContent = {
     tagline: 'DevOps • Cloud • Full Stack Engineer',
     intro:
       'Computer Science student building cloud-native systems, DevOps pipelines, and modern full stack applications.',
-    profileImage: 'assets/images/profile/profile.jpg',
+    profileImage: 'assets/images/profile/profile-v2.jpg',
     cvUrl: 'assets/Harsh-Raj-CV.pdf',
     links: [
       { label: 'GitHub', href: 'https://github.com/harsh-raj04' },
