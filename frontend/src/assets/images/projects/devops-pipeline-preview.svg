@@ -1,0 +1,20 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="620" rx="32" fill="#0F172A"/>
+  <rect x="60" y="74" width="780" height="472" rx="28" fill="#111C3A"/>
+  <rect x="108" y="138" width="148" height="84" rx="20" fill="#3B82F6"/>
+  <rect x="376" y="138" width="148" height="84" rx="20" fill="#22C55E"/>
+  <rect x="644" y="138" width="148" height="84" rx="20" fill="#3B82F6" opacity="0.85"/>
+  <rect x="208" y="344" width="148" height="84" rx="20" fill="#22C55E" opacity="0.92"/>
+  <rect x="544" y="344" width="148" height="84" rx="20" fill="#3B82F6" opacity="0.92"/>
+  <path d="M256 180H376" stroke="white" stroke-width="10" stroke-linecap="round" opacity="0.7"/>
+  <path d="M524 180H644" stroke="white" stroke-width="10" stroke-linecap="round" opacity="0.7"/>
+  <path d="M450 222V344" stroke="white" stroke-width="10" stroke-linecap="round" opacity="0.7"/>
+  <path d="M356 386H544" stroke="white" stroke-width="10" stroke-linecap="round" opacity="0.7"/>
+  <text x="108" y="106" fill="#93C5FD" font-family="Inter, sans-serif" font-size="24" font-weight="700">DevOps Food Delivery Pipeline</text>
+  <text x="108" y="260" fill="white" font-family="Inter, sans-serif" font-size="26" font-weight="600">Build</text>
+  <text x="376" y="260" fill="white" font-family="Inter, sans-serif" font-size="26" font-weight="600">Test</text>
+  <text x="644" y="260" fill="white" font-family="Inter, sans-serif" font-size="26" font-weight="600">Deploy</text>
+  <text x="208" y="466" fill="white" font-family="Inter, sans-serif" font-size="26" font-weight="600">Terraform</text>
+  <text x="552" y="466" fill="white" font-family="Inter, sans-serif" font-size="26" font-weight="600">AWS</text>
+</svg>
+

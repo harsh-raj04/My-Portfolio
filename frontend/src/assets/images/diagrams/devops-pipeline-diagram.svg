@@ -1,0 +1,19 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="620" rx="32" fill="#020617"/>
+  <path d="M152 166H748" stroke="#38BDF8" stroke-opacity="0.3" stroke-width="4"/>
+  <path d="M152 310H748" stroke="#22C55E" stroke-opacity="0.3" stroke-width="4"/>
+  <path d="M152 454H748" stroke="#38BDF8" stroke-opacity="0.3" stroke-width="4"/>
+  <rect x="102" y="124" width="180" height="84" rx="20" fill="#0F172A" stroke="#3B82F6"/>
+  <rect x="360" y="124" width="180" height="84" rx="20" fill="#0F172A" stroke="#3B82F6"/>
+  <rect x="618" y="124" width="180" height="84" rx="20" fill="#0F172A" stroke="#3B82F6"/>
+  <rect x="230" y="268" width="180" height="84" rx="20" fill="#0F172A" stroke="#22C55E"/>
+  <rect x="490" y="268" width="180" height="84" rx="20" fill="#0F172A" stroke="#22C55E"/>
+  <rect x="360" y="412" width="180" height="84" rx="20" fill="#0F172A" stroke="#3B82F6"/>
+  <text x="132" y="176" fill="white" font-family="Inter, sans-serif" font-size="24" font-weight="600">Git Push</text>
+  <text x="388" y="176" fill="white" font-family="Inter, sans-serif" font-size="24" font-weight="600">Jenkins</text>
+  <text x="654" y="176" fill="white" font-family="Inter, sans-serif" font-size="24" font-weight="600">Docker Build</text>
+  <text x="256" y="320" fill="white" font-family="Inter, sans-serif" font-size="24" font-weight="600">Terraform Apply</text>
+  <text x="536" y="320" fill="white" font-family="Inter, sans-serif" font-size="24" font-weight="600">AWS Deploy</text>
+  <text x="404" y="464" fill="white" font-family="Inter, sans-serif" font-size="24" font-weight="600">Monitoring</text>
+</svg>
+

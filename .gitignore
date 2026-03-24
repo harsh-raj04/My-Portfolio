@@ -1,0 +1,11 @@
+node_modules
+dist
+.angular
+.cache
+.DS_Store
+.env
+coverage
+frontend/.angular
+frontend/dist
+backend/dist
+

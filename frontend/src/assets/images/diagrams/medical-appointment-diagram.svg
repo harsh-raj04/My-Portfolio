@@ -1,0 +1,17 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="620" rx="32" fill="#020617"/>
+  <rect x="112" y="148" width="196" height="110" rx="24" fill="#3B82F6"/>
+  <rect x="352" y="148" width="196" height="110" rx="24" fill="#0F172A" stroke="#3B82F6"/>
+  <rect x="592" y="148" width="196" height="110" rx="24" fill="#22C55E"/>
+  <rect x="232" y="362" width="196" height="110" rx="24" fill="#0F172A" stroke="#22C55E"/>
+  <rect x="472" y="362" width="196" height="110" rx="24" fill="#0F172A" stroke="#3B82F6"/>
+  <path d="M308 204H352" stroke="white" stroke-width="10" stroke-linecap="round" opacity="0.75"/>
+  <path d="M548 204H592" stroke="white" stroke-width="10" stroke-linecap="round" opacity="0.75"/>
+  <path d="M450 258V362" stroke="white" stroke-width="10" stroke-linecap="round" opacity="0.75"/>
+  <text x="154" y="212" fill="white" font-family="Inter, sans-serif" font-size="26" font-weight="700">Patient UI</text>
+  <text x="386" y="212" fill="white" font-family="Inter, sans-serif" font-size="26" font-weight="700">Validation</text>
+  <text x="624" y="212" fill="#052E16" font-family="Inter, sans-serif" font-size="26" font-weight="700">Scheduling</text>
+  <text x="264" y="426" fill="white" font-family="Inter, sans-serif" font-size="26" font-weight="700">Doctor Slots</text>
+  <text x="516" y="426" fill="white" font-family="Inter, sans-serif" font-size="26" font-weight="700">Booking Status</text>
+</svg>
+

@@ -1,0 +1,22 @@
+{
+  "name": "harsh-raj-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev:frontend": "npm run dev --workspace frontend",
+    "dev:backend": "npm run dev --workspace backend",
+    "build:frontend": "npm run build --workspace frontend",
+    "build:gh-pages": "npm run build:gh-pages --workspace frontend",
+    "build:backend": "npm run build --workspace backend",
+    "seed": "npm run seed --workspace backend",
+    "lint": "npm run lint --workspace frontend && npm run lint --workspace backend",
+    "test": "npm run test --workspace frontend && npm run test --workspace backend"
+  },
+  "engines": {
+    "node": ">=20.11.0"
+  }
+}

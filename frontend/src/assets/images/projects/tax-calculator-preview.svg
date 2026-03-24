@@ -1,0 +1,24 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="620" rx="32" fill="#0F172A"/>
+  <rect x="58" y="66" width="784" height="488" rx="34" fill="#101B36"/>
+  <rect x="58" y="66" width="784" height="488" rx="34" stroke="#1E293B" stroke-width="2"/>
+  <rect x="96" y="104" width="220" height="52" rx="26" fill="#1D4ED8"/>
+  <text x="206" y="137" fill="white" font-family="Inter, sans-serif" font-size="24" font-weight="700" text-anchor="middle">Tax Calculator</text>
+  <rect x="96" y="194" width="254" height="300" rx="28" fill="#16233F"/>
+  <rect x="388" y="194" width="188" height="136" rx="26" fill="#DBEAFE"/>
+  <rect x="604" y="194" width="204" height="136" rx="26" fill="#DCFCE7"/>
+  <rect x="388" y="358" width="420" height="136" rx="26" fill="#16233F"/>
+  <rect x="124" y="234" width="198" height="52" rx="18" fill="#0F172A"/>
+  <rect x="124" y="310" width="198" height="52" rx="18" fill="#3B82F6"/>
+  <rect x="124" y="386" width="198" height="52" rx="18" fill="#22C55E"/>
+  <text x="150" y="268" fill="white" font-family="Inter, sans-serif" font-size="24" font-weight="700">Gross income</text>
+  <text x="150" y="344" fill="white" font-family="Inter, sans-serif" font-size="24" font-weight="700">Deductions</text>
+  <text x="150" y="420" fill="white" font-family="Inter, sans-serif" font-size="24" font-weight="700">Compare</text>
+  <text x="420" y="248" fill="#0F172A" font-family="Inter, sans-serif" font-size="18" font-weight="700">Old regime</text>
+  <text x="420" y="284" fill="#0F172A" font-family="Inter, sans-serif" font-size="30" font-weight="800">₹ 2.14L</text>
+  <text x="636" y="248" fill="#166534" font-family="Inter, sans-serif" font-size="18" font-weight="700">New regime</text>
+  <text x="636" y="284" fill="#166534" font-family="Inter, sans-serif" font-size="30" font-weight="800">₹ 1.92L</text>
+  <text x="420" y="404" fill="#93C5FD" font-family="Inter, sans-serif" font-size="18" font-weight="700">Decision support</text>
+  <text x="420" y="446" fill="white" font-family="Inter, sans-serif" font-size="34" font-weight="800">Old vs New Regime</text>
+  <text x="420" y="478" fill="white" fill-opacity="0.8" font-family="Inter, sans-serif" font-size="18" font-weight="500">Cleaner comparison, live breakdown, and instant tax estimates.</text>
+</svg>

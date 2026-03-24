@@ -1,0 +1,23 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#FFF9F2"/>
+  <rect x="24" y="24" width="1152" height="752" rx="24" fill="#FFFFFF" stroke="#F59E0B" stroke-width="8"/>
+  <rect x="52" y="52" width="140" height="696" fill="#F59E0B" fill-opacity="0.18"/>
+  <circle cx="122" cy="160" r="86" fill="#FFFFFF" stroke="#F59E0B" stroke-width="8"/>
+  <circle cx="122" cy="160" r="42" fill="#FEF3C7"/>
+  <path d="M122 236L78 334H166L122 236Z" fill="#F59E0B"/>
+  <circle cx="392" cy="112" r="34" fill="#1F2937"/>
+  <circle cx="392" cy="112" r="18" fill="#F59E0B"/>
+  <text x="440" y="120" fill="#1F2937" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="700">Cipher Schools</text>
+  <text x="332" y="220" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="700">Certificate of Completion</text>
+  <text x="332" y="328" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="32">This is to certify that</text>
+  <text x="332" y="408" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="66" font-weight="800">Harsh Raj</text>
+  <text x="332" y="488" fill="#374151" font-family="Inter, Arial, sans-serif" font-size="28">has successfully completed training in</text>
+  <text x="332" y="548" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Data Structure and Algorithm using Java Programming</text>
+  <text x="332" y="606" fill="#374151" font-family="Inter, Arial, sans-serif" font-size="28">from CipherSchools during the learning period.</text>
+  <path d="M332 672H520" stroke="#F59E0B" stroke-width="4"/>
+  <text x="332" y="720" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Anurag Mishra</text>
+  <text x="560" y="720" fill="#6B7280" font-family="Inter, Arial, sans-serif" font-size="24">CipherSchools, India</text>
+  <rect x="1012" y="602" width="110" height="110" rx="10" fill="#111827"/>
+  <path d="M1034 624H1100V690H1034V624Z" fill="#FFFFFF"/>
+  <path d="M1050 640H1084V674H1050V640Z" fill="#111827"/>
+</svg>

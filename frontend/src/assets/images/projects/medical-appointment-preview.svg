@@ -1,0 +1,24 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="620" rx="32" fill="#0F172A"/>
+  <rect x="56" y="64" width="788" height="492" rx="34" fill="#101B36"/>
+  <rect x="56" y="64" width="788" height="492" rx="34" stroke="#1E293B" stroke-width="2"/>
+  <rect x="96" y="104" width="260" height="412" rx="28" fill="#16233F"/>
+  <rect x="386" y="104" width="420" height="116" rx="26" fill="#DBEAFE"/>
+  <rect x="386" y="246" width="420" height="270" rx="26" fill="#16233F"/>
+  <text x="126" y="140" fill="#93C5FD" font-family="Inter, sans-serif" font-size="24" font-weight="700">Medical Appointment</text>
+  <circle cx="152" cy="220" r="42" fill="#3B82F6"/>
+  <rect x="210" y="188" width="112" height="24" rx="12" fill="#E2E8F0"/>
+  <rect x="210" y="224" width="92" height="16" rx="8" fill="#64748B"/>
+  <rect x="124" y="306" width="204" height="56" rx="18" fill="#1D4ED8"/>
+  <rect x="124" y="382" width="204" height="56" rx="18" fill="#22C55E"/>
+  <text x="152" y="340" fill="white" font-family="Inter, sans-serif" font-size="22" font-weight="700">09:30 AM</text>
+  <text x="152" y="416" fill="white" font-family="Inter, sans-serif" font-size="22" font-weight="700">11:00 AM</text>
+  <text x="420" y="154" fill="#166534" font-family="Inter, sans-serif" font-size="18" font-weight="700">Booking workflow</text>
+  <text x="420" y="190" fill="#0F172A" font-family="Inter, sans-serif" font-size="34" font-weight="800">Fast scheduling, clear availability</text>
+  <rect x="420" y="288" width="352" height="44" rx="14" fill="#0F172A"/>
+  <rect x="420" y="350" width="352" height="44" rx="14" fill="#0F172A"/>
+  <rect x="420" y="412" width="214" height="46" rx="16" fill="#3B82F6"/>
+  <text x="446" y="317" fill="white" font-family="Inter, sans-serif" font-size="18" font-weight="600">Select doctor and specialty</text>
+  <text x="446" y="379" fill="white" font-family="Inter, sans-serif" font-size="18" font-weight="600">Choose date, slot, and patient details</text>
+  <text x="527" y="441" fill="white" font-family="Inter, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Confirm booking</text>
+</svg>
