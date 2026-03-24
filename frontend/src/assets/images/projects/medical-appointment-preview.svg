@@ -1,24 +1,36 @@
 <svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="med-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6D28D9"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+    <linearGradient id="med-hero" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+  </defs>
   <rect width="900" height="620" rx="32" fill="#0F172A"/>
-  <rect x="56" y="64" width="788" height="492" rx="34" fill="#101B36"/>
-  <rect x="56" y="64" width="788" height="492" rx="34" stroke="#1E293B" stroke-width="2"/>
-  <rect x="96" y="104" width="260" height="412" rx="28" fill="#16233F"/>
-  <rect x="386" y="104" width="420" height="116" rx="26" fill="#DBEAFE"/>
-  <rect x="386" y="246" width="420" height="270" rx="26" fill="#16233F"/>
-  <text x="126" y="140" fill="#93C5FD" font-family="Inter, sans-serif" font-size="24" font-weight="700">Medical Appointment</text>
-  <circle cx="152" cy="220" r="42" fill="#3B82F6"/>
-  <rect x="210" y="188" width="112" height="24" rx="12" fill="#E2E8F0"/>
-  <rect x="210" y="224" width="92" height="16" rx="8" fill="#64748B"/>
-  <rect x="124" y="306" width="204" height="56" rx="18" fill="#1D4ED8"/>
-  <rect x="124" y="382" width="204" height="56" rx="18" fill="#22C55E"/>
-  <text x="152" y="340" fill="white" font-family="Inter, sans-serif" font-size="22" font-weight="700">09:30 AM</text>
-  <text x="152" y="416" fill="white" font-family="Inter, sans-serif" font-size="22" font-weight="700">11:00 AM</text>
-  <text x="420" y="154" fill="#166534" font-family="Inter, sans-serif" font-size="18" font-weight="700">Booking workflow</text>
-  <text x="420" y="190" fill="#0F172A" font-family="Inter, sans-serif" font-size="34" font-weight="800">Fast scheduling, clear availability</text>
-  <rect x="420" y="288" width="352" height="44" rx="14" fill="#0F172A"/>
-  <rect x="420" y="350" width="352" height="44" rx="14" fill="#0F172A"/>
-  <rect x="420" y="412" width="214" height="46" rx="16" fill="#3B82F6"/>
-  <text x="446" y="317" fill="white" font-family="Inter, sans-serif" font-size="18" font-weight="600">Select doctor and specialty</text>
-  <text x="446" y="379" fill="white" font-family="Inter, sans-serif" font-size="18" font-weight="600">Choose date, slot, and patient details</text>
-  <text x="527" y="441" fill="white" font-family="Inter, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Confirm booking</text>
+  <rect x="40" y="40" width="820" height="540" rx="34" fill="url(#med-bg)"/>
+  <rect x="118" y="60" width="664" height="72" rx="26" fill="#FFFFFF"/>
+  <text x="156" y="104" fill="#111827" font-family="Inter, sans-serif" font-size="30" font-weight="800">MEDAPPT</text>
+  <text x="456" y="103" fill="#111827" font-family="Inter, sans-serif" font-size="18" font-weight="600" text-anchor="middle">Home</text>
+  <text x="522" y="103" fill="#111827" font-family="Inter, sans-serif" font-size="18" font-weight="600" text-anchor="middle">About</text>
+  <text x="600" y="103" fill="#111827" font-family="Inter, sans-serif" font-size="18" font-weight="600" text-anchor="middle">Services</text>
+  <text x="678" y="103" fill="#111827" font-family="Inter, sans-serif" font-size="18" font-weight="600" text-anchor="middle">Doctors</text>
+  <rect x="692" y="78" width="74" height="36" rx="16" fill="#F8FAFC" stroke="#4F46E5" stroke-width="2"/>
+  <text x="729" y="101" fill="#111827" font-family="Inter, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Login</text>
+
+  <rect x="118" y="152" width="664" height="250" rx="28" fill="url(#med-hero)"/>
+  <text x="450" y="245" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="34" font-weight="800" text-anchor="middle">Book Your Medical</text>
+  <text x="450" y="300" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="34" font-weight="800" text-anchor="middle">Appointments Online</text>
+  <text x="450" y="344" fill="#E9D5FF" font-family="Inter, sans-serif" font-size="19" font-weight="500" text-anchor="middle">Find and schedule appointments with doctors and healthcare providers</text>
+  <rect x="330" y="374" width="124" height="46" rx="18" fill="#312E81"/>
+  <text x="392" y="404" fill="white" font-family="Inter, sans-serif" font-size="20" font-weight="700" text-anchor="middle">Get Started</text>
+  <text x="510" y="403" fill="white" font-family="Inter, sans-serif" font-size="20" font-weight="700">Learn More →</text>
+
+  <rect x="118" y="438" width="664" height="104" rx="30" fill="#FFFFFF"/>
+  <text x="156" y="480" fill="#4F46E5" font-family="Inter, sans-serif" font-size="18" font-weight="700">DETAILS</text>
+  <text x="156" y="522" fill="#111827" font-family="Inter, sans-serif" font-size="30" font-weight="800">Effortlessly manage your health</text>
+  <circle cx="688" cy="492" r="54" fill="#F8FAFC"/>
+  <rect x="642" y="522" width="92" height="8" rx="4" fill="#E2E8F0"/>
 </svg>

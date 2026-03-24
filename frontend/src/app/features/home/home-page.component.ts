@@ -615,6 +615,23 @@ type ChatMessage = {
                   View Case Study
                 </a>
                 <a
+                  *ngIf="project.liveUrl"
+                  class="rounded-full border border-emerald-200 bg-emerald-50 px-5 py-3 text-sm font-semibold text-emerald-700 transition hover:-translate-y-1 hover:border-emerald-400 hover:text-emerald-800 dark:border-emerald-500/30 dark:bg-emerald-500/10 dark:text-emerald-300"
+                  [href]="project.liveUrl"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Live Site
+                </a>
+                <button
+                  *ngIf="project.demoUrl"
+                  type="button"
+                  class="rounded-full border border-sky-200 bg-sky-50 px-5 py-3 text-sm font-semibold text-sky-700 transition hover:-translate-y-1 hover:border-sky-400 hover:text-sky-800 dark:border-sky-500/30 dark:bg-sky-500/10 dark:text-sky-300"
+                  (click)="openDemo(project)"
+                >
+                  {{ project.demoLabel || 'Watch Demo' }}
+                </button>
+                <a
                   *ngIf="project.githubUrl"
                   class="rounded-full border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:-translate-y-1 hover:border-slate-950 hover:text-slate-950 dark:border-slate-700 dark:text-slate-200 dark:hover:border-white dark:hover:text-white"
                   [href]="project.githubUrl"
@@ -628,6 +645,41 @@ type ChatMessage = {
           </article>
         </div>
       </section>
+
+      <div *ngIf="activeDemoProject() as demo" class="project-demo-modal" (click)="closeDemo()">
+        <div class="project-demo-modal__backdrop"></div>
+        <div class="project-demo-modal__panel" (click)="$event.stopPropagation()">
+          <button type="button" class="project-demo-modal__close" (click)="closeDemo()">×</button>
+          <div class="project-demo-modal__media">
+            <img
+              [ngSrc]="demo.previewImage"
+              width="1200"
+              height="760"
+              [alt]="demo.title + ' demo preview'"
+              class="project-demo-modal__image"
+            />
+            <div class="project-demo-modal__overlay">
+              <span class="project-demo-modal__pill">Demo Preview</span>
+              <h3>{{ demo.title }}</h3>
+              <p>LinkedIn blocks direct embedded playback here, so the demo opens externally from this preview.</p>
+            </div>
+          </div>
+
+          <div class="project-demo-modal__actions">
+            <a
+              class="project-demo-modal__primary"
+              [href]="demo.demoUrl"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open Demo on LinkedIn
+            </a>
+            <button type="button" class="project-demo-modal__secondary" (click)="closeDemo()">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
 
       <section id="education" appRevealOnScroll class="section-shell reveal-on-scroll mx-auto max-w-7xl px-6 py-24 lg:px-10">
         <div appRevealOnScroll class="reveal-on-scroll">
@@ -858,6 +910,7 @@ export class HomePageComponent {
   readonly introClosing = signal(false);
   readonly heroMotionReady = signal(this.hasSeenIntro());
   readonly chatOpen = signal(false);
+  readonly activeDemoProject = signal<Project | null>(null);
   readonly chatMessages = signal<ChatMessage[]>([
     {
       role: 'assistant',
@@ -955,6 +1008,14 @@ export class HomePageComponent {
 
   toggleChat() {
     this.chatOpen.update((value) => !value);
+  }
+
+  openDemo(project: Project) {
+    this.activeDemoProject.set(project);
+  }
+
+  closeDemo() {
+    this.activeDemoProject.set(null);
   }
 
   aboutIcon(type: string) {

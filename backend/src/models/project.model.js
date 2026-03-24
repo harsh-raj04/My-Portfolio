@@ -26,6 +26,9 @@ const projectSchema = new mongoose.Schema(
     features: [{ type: String, required: true }],
     gallery: [galleryItemSchema],
     githubUrl: { type: String, required: true },
+    liveUrl: { type: String, default: '' },
+    demoUrl: { type: String, default: '' },
+    demoLabel: { type: String, default: '' },
     order: { type: Number, required: true }
   },
   {
@@ -37,4 +40,3 @@ const projectSchema = new mongoose.Schema(
 projectSchema.index({ order: 1 });
 
 export const Project = mongoose.model('Project', projectSchema);
-

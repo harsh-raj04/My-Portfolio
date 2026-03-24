@@ -95,6 +95,23 @@ import { PortfolioApiService } from '../../core/services/portfolio-api.service';
 
               <div class="mt-10 flex flex-wrap gap-4">
                 <a
+                  *ngIf="item.liveUrl"
+                  [href]="item.liveUrl"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="rounded-full bg-emerald-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:-translate-y-1 hover:bg-emerald-300"
+                >
+                  Open Live Site
+                </a>
+                <button
+                  *ngIf="item.demoUrl"
+                  type="button"
+                  class="rounded-full bg-sky-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:-translate-y-1 hover:bg-sky-300"
+                  (click)="openDemo()"
+                >
+                  {{ item.demoLabel || 'Watch Demo' }}
+                </button>
+                <a
                   *ngIf="item.githubUrl"
                   [href]="item.githubUrl"
                   target="_blank"
@@ -151,6 +168,41 @@ import { PortfolioApiService } from '../../core/services/portfolio-api.service';
           </div>
         </ng-template>
       </div>
+
+      <div *ngIf="showDemo() && project() as item" class="project-demo-modal" (click)="closeDemo()">
+        <div class="project-demo-modal__backdrop"></div>
+        <div class="project-demo-modal__panel" (click)="$event.stopPropagation()">
+          <button type="button" class="project-demo-modal__close" (click)="closeDemo()">×</button>
+          <div class="project-demo-modal__media">
+            <img
+              [ngSrc]="item.previewImage"
+              width="1200"
+              height="760"
+              [alt]="item.title + ' demo preview'"
+              class="project-demo-modal__image"
+            />
+            <div class="project-demo-modal__overlay">
+              <span class="project-demo-modal__pill">Demo Preview</span>
+              <h3>{{ item.title }}</h3>
+              <p>LinkedIn blocks direct embedded playback, so the demo opens externally from this preview panel.</p>
+            </div>
+          </div>
+
+          <div class="project-demo-modal__actions">
+            <a
+              class="project-demo-modal__primary"
+              [href]="item.demoUrl"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open Demo on LinkedIn
+            </a>
+            <button type="button" class="project-demo-modal__secondary" (click)="closeDemo()">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   `
 })
@@ -160,8 +212,10 @@ export class ProjectDetailPageComponent {
   private readonly portfolioApi = inject(PortfolioApiService);
   private readonly location = inject(Location);
   private readonly projectSignal = signal<Project | null>(null);
+  private readonly showDemoSignal = signal(false);
 
   readonly project = computed(() => this.projectSignal());
+  readonly showDemo = computed(() => this.showDemoSignal());
 
   constructor() {
     this.route.paramMap
@@ -177,5 +231,13 @@ export class ProjectDetailPageComponent {
   goBack(event: Event) {
     event.preventDefault();
     this.location.back();
+  }
+
+  openDemo() {
+    this.showDemoSignal.set(true);
+  }
+
+  closeDemo() {
+    this.showDemoSignal.set(false);
   }
 }

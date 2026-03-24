@@ -41,6 +41,9 @@ export interface Project {
   features: string[];
   gallery: ProjectGalleryItem[];
   githubUrl: string;
+  liveUrl?: string;
+  demoUrl?: string;
+  demoLabel?: string;
   order: number;
 }
 

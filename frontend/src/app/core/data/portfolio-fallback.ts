@@ -97,6 +97,9 @@ export const fallbackProjects: Project[] = [
       }
     ],
     githubUrl: 'https://github.com/harsh-raj04/Zomato-devops-pipeline',
+    demoUrl:
+      'https://www.linkedin.com/posts/harshraj04_devops-aws-cicd-activity-7409290871176691713-LArS?utm_source=share&utm_medium=member_desktop&rcm=ACoAADpuG3AB31EIEH0nmfl0bvVM1VWB2g8ZvI4',
+    demoLabel: 'Watch Demo',
     order: 1
   },
   {
@@ -162,6 +165,7 @@ export const fallbackProjects: Project[] = [
       }
     ],
     githubUrl: 'https://github.com/harsh-raj04/Tax-Calculator',
+    liveUrl: 'https://harsh-raj04.github.io/Tax-Calculator/',
     order: 3
   },
   {
@@ -197,6 +201,7 @@ export const fallbackProjects: Project[] = [
       }
     ],
     githubUrl: 'https://github.com/harsh-raj04/Medical-Appointment-Website',
+    liveUrl: 'https://harsh-raj04.github.io/Medical-Appointment-Website/',
     order: 4
   }
 ];

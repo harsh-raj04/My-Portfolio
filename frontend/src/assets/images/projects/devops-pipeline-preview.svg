@@ -1,20 +1,71 @@
 <svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="100%" stop-color="#16213E"/>
+    </linearGradient>
+    <linearGradient id="chrome" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4A1D2A"/>
+      <stop offset="100%" stop-color="#6B2230"/>
+    </linearGradient>
+    <linearGradient id="offerA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#F97316"/>
+    </linearGradient>
+    <linearGradient id="offerB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#FB7185"/>
+    </linearGradient>
+    <linearGradient id="offerC" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
   <rect width="900" height="620" rx="32" fill="#0F172A"/>
-  <rect x="60" y="74" width="780" height="472" rx="28" fill="#111C3A"/>
-  <rect x="108" y="138" width="148" height="84" rx="20" fill="#3B82F6"/>
-  <rect x="376" y="138" width="148" height="84" rx="20" fill="#22C55E"/>
-  <rect x="644" y="138" width="148" height="84" rx="20" fill="#3B82F6" opacity="0.85"/>
-  <rect x="208" y="344" width="148" height="84" rx="20" fill="#22C55E" opacity="0.92"/>
-  <rect x="544" y="344" width="148" height="84" rx="20" fill="#3B82F6" opacity="0.92"/>
-  <path d="M256 180H376" stroke="white" stroke-width="10" stroke-linecap="round" opacity="0.7"/>
-  <path d="M524 180H644" stroke="white" stroke-width="10" stroke-linecap="round" opacity="0.7"/>
-  <path d="M450 222V344" stroke="white" stroke-width="10" stroke-linecap="round" opacity="0.7"/>
-  <path d="M356 386H544" stroke="white" stroke-width="10" stroke-linecap="round" opacity="0.7"/>
-  <text x="108" y="106" fill="#93C5FD" font-family="Inter, sans-serif" font-size="24" font-weight="700">DevOps Food Delivery Pipeline</text>
-  <text x="108" y="260" fill="white" font-family="Inter, sans-serif" font-size="26" font-weight="600">Build</text>
-  <text x="376" y="260" fill="white" font-family="Inter, sans-serif" font-size="26" font-weight="600">Test</text>
-  <text x="644" y="260" fill="white" font-family="Inter, sans-serif" font-size="26" font-weight="600">Deploy</text>
-  <text x="208" y="466" fill="white" font-family="Inter, sans-serif" font-size="26" font-weight="600">Terraform</text>
-  <text x="552" y="466" fill="white" font-family="Inter, sans-serif" font-size="26" font-weight="600">AWS</text>
-</svg>
+  <rect x="64" y="70" width="772" height="480" rx="30" fill="url(#frame)" stroke="#334155" stroke-width="2"/>
+  <rect x="88" y="94" width="724" height="432" rx="26" fill="#FFF7ED"/>
+  <rect x="88" y="94" width="724" height="54" rx="26" fill="url(#chrome)"/>
+  <circle cx="116" cy="121" r="8" fill="#FB7185"/>
+  <circle cx="140" cy="121" r="8" fill="#F59E0B"/>
+  <circle cx="164" cy="121" r="8" fill="#22C55E"/>
 
+  <text x="114" y="192" fill="#EA580C" font-family="Inter, sans-serif" font-size="32" font-weight="800">FoodHub</text>
+  <rect x="232" y="164" width="170" height="40" rx="18" fill="#FFF7ED" stroke="#FCD34D" stroke-width="2"/>
+  <text x="317" y="190" fill="#92400E" font-family="Inter, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Bangalore, India</text>
+  <text x="634" y="188" fill="#475569" font-family="Inter, sans-serif" font-size="17" font-weight="600">Offers</text>
+  <text x="708" y="188" fill="#475569" font-family="Inter, sans-serif" font-size="17" font-weight="600">Help</text>
+  <text x="764" y="188" fill="#475569" font-family="Inter, sans-serif" font-size="17" font-weight="600">Sign In</text>
+
+  <rect x="114" y="224" width="672" height="48" rx="20" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  <circle cx="144" cy="248" r="10" fill="#111827"/>
+  <path d="M141 248L144 251L150 242" stroke="#FFF7ED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="168" y="255" fill="#475569" font-family="Inter, sans-serif" font-size="18" font-weight="500">Search for restaurants and food</text>
+
+  <text x="114" y="320" fill="#111827" font-family="Inter, sans-serif" font-size="28" font-weight="800">What’s on your mind?</text>
+  <g>
+    <circle cx="150" cy="382" r="34" fill="#FDE68A"/>
+    <circle cx="254" cy="382" r="34" fill="#FBCFE8"/>
+    <circle cx="358" cy="382" r="34" fill="#FDE68A"/>
+    <circle cx="462" cy="382" r="34" fill="#BFDBFE"/>
+    <circle cx="566" cy="382" r="34" fill="#FBCFE8"/>
+    <circle cx="670" cy="382" r="34" fill="#C4B5FD"/>
+    <circle cx="774" cy="382" r="34" fill="#A7F3D0"/>
+  </g>
+  <text x="120" y="436" fill="#475569" font-family="Inter, sans-serif" font-size="15" font-weight="600">Biryani</text>
+  <text x="228" y="436" fill="#475569" font-family="Inter, sans-serif" font-size="15" font-weight="600">Pizza</text>
+  <text x="330" y="436" fill="#475569" font-family="Inter, sans-serif" font-size="15" font-weight="600">Burger</text>
+  <text x="432" y="436" fill="#475569" font-family="Inter, sans-serif" font-size="15" font-weight="600">Chinese</text>
+  <text x="543" y="436" fill="#475569" font-family="Inter, sans-serif" font-size="15" font-weight="600">Pasta</text>
+  <text x="646" y="436" fill="#475569" font-family="Inter, sans-serif" font-size="15" font-weight="600">Noodles</text>
+  <text x="752" y="436" fill="#475569" font-family="Inter, sans-serif" font-size="15" font-weight="600">Rolls</text>
+
+  <path d="M114 462H786" stroke="#E5E7EB" stroke-width="2"/>
+  <text x="114" y="498" fill="#111827" font-family="Inter, sans-serif" font-size="28" font-weight="800">Top restaurant chains</text>
+
+  <rect x="114" y="516" width="190" height="82" rx="22" fill="url(#offerA)"/>
+  <rect x="356" y="516" width="190" height="82" rx="22" fill="url(#offerB)"/>
+  <rect x="598" y="516" width="190" height="82" rx="22" fill="url(#offerC)"/>
+  <rect x="132" y="570" width="78" height="16" rx="8" fill="#FFF7ED" fill-opacity="0.92"/>
+  <rect x="374" y="570" width="78" height="16" rx="8" fill="#FFF7ED" fill-opacity="0.92"/>
+  <rect x="616" y="570" width="78" height="16" rx="8" fill="#FFF7ED" fill-opacity="0.92"/>
+</svg>
