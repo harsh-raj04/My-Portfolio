@@ -608,10 +608,6 @@ button {
   color: #0f172a;
 }
 
-.light .contact-link-card span:last-child {
-  color: #2563eb;
-}
-
 .portfolio-chat {
   position: fixed;
   right: 1.5rem;

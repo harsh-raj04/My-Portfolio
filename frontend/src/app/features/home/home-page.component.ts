@@ -773,51 +773,61 @@ type ChatMessage = {
           appRevealOnScroll
           class="contact-shell reveal-on-scroll rounded-[2rem] border border-slate-200 bg-gradient-to-br from-slate-950 to-sky-700 p-10 text-white shadow-soft dark:border-slate-800"
         >
-          <div class="grid gap-8 lg:grid-cols-2 lg:items-stretch">
+          <div class="mx-auto max-w-3xl text-center">
+            <h2 class="font-heading text-4xl font-semibold md:text-5xl">Contact</h2>
+            <p class="mt-3 text-base text-slate-300">
+              Let’s collaborate on cloud, DevOps, or full stack product work.
+            </p>
+          </div>
+
+          <div class="mt-10 grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
             <div class="contact-form-shell flex h-full flex-col rounded-[1.75rem] border border-white/12 bg-slate-950/35 p-6 backdrop-blur md:p-8">
-              <h2 class="font-heading text-4xl font-semibold md:text-5xl">Contact</h2>
+              <h3 class="font-heading text-3xl font-semibold">Send a message</h3>
+              <p class="mt-2 text-sm text-slate-300">
+                Share your idea, project, or opportunity.
+              </p>
               <form
-                class="mt-8 flex flex-1 flex-col space-y-5"
+                class="mt-7 flex flex-1 flex-col space-y-4"
                 action="mailto:nameharshraj@gmail.com"
                 method="post"
                 enctype="text/plain"
               >
                 <div>
-                  <label class="mb-3 block text-xl font-medium text-white" for="contact-name">Name</label>
+                  <label class="mb-2 block text-base font-medium text-white" for="contact-name">Name</label>
                   <input
                     id="contact-name"
                     name="name"
                     type="text"
                     placeholder="Your name"
-                    class="w-full rounded-[1rem] border border-white/10 bg-slate-950/30 px-6 py-5 text-lg text-white outline-none transition placeholder:text-slate-400 focus:border-sky-400"
+                    class="w-full rounded-[1rem] border border-white/10 bg-slate-950/30 px-5 py-4 text-base text-white outline-none transition placeholder:text-slate-400 focus:border-sky-400"
                   />
                 </div>
 
                 <div>
-                  <label class="mb-3 block text-xl font-medium text-white" for="contact-email">Email</label>
+                  <label class="mb-2 block text-base font-medium text-white" for="contact-email">Email</label>
                   <input
                     id="contact-email"
                     name="email"
                     type="email"
                     placeholder="Your email"
-                    class="w-full rounded-[1rem] border border-white/10 bg-slate-950/30 px-6 py-5 text-lg text-white outline-none transition placeholder:text-slate-400 focus:border-sky-400"
+                    class="w-full rounded-[1rem] border border-white/10 bg-slate-950/30 px-5 py-4 text-base text-white outline-none transition placeholder:text-slate-400 focus:border-sky-400"
                   />
                 </div>
 
                 <div>
-                  <label class="mb-3 block text-xl font-medium text-white" for="contact-message">Message</label>
+                  <label class="mb-2 block text-base font-medium text-white" for="contact-message">Message</label>
                   <textarea
                     id="contact-message"
                     name="message"
-                    rows="5"
+                    rows="4"
                     placeholder="Your message"
-                    class="w-full rounded-[1rem] border border-white/10 bg-slate-950/30 px-6 py-5 text-lg text-white outline-none transition placeholder:text-slate-400 focus:border-sky-400"
+                    class="w-full rounded-[1rem] border border-white/10 bg-slate-950/30 px-5 py-4 text-base text-white outline-none transition placeholder:text-slate-400 focus:border-sky-400"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  class="mt-auto self-start rounded-[1rem] bg-gradient-to-r from-violet-500 to-fuchsia-500 px-8 py-4 text-lg font-semibold text-white transition hover:-translate-y-1 hover:from-violet-400 hover:to-fuchsia-400"
+                  class="mt-2 self-start rounded-[1rem] bg-gradient-to-r from-violet-500 to-fuchsia-500 px-7 py-3.5 text-base font-semibold text-white transition hover:-translate-y-1 hover:from-violet-400 hover:to-fuchsia-400"
                 >
                   Send message
                 </button>
@@ -825,25 +835,44 @@ type ChatMessage = {
             </div>
 
             <div class="contact-links-shell flex h-full flex-col rounded-[1.75rem] border border-white/12 bg-slate-950/35 p-6 backdrop-blur md:p-8">
-              <h3 class="font-heading text-3xl font-semibold md:text-4xl">Connect</h3>
-              <div class="mt-8 grid flex-1 gap-4 content-start">
-              <a
-                *ngFor="let link of content().contactLinks"
-                [href]="contactHref(link)"
-                [attr.target]="contactTarget(link)"
-                rel="noreferrer"
-                class="contact-link-card group flex items-center justify-between rounded-[1.25rem] border border-white/20 bg-white/10 px-5 py-4 backdrop-blur transition hover:-translate-y-1 hover:bg-white/20"
-              >
-                <span class="flex items-center gap-3">
-                  <span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white/15 text-lg">
-                    {{ contactIcon(link.label) }}
-                  </span>
-                  <span class="text-sm font-semibold uppercase tracking-[0.18em]">{{ link.label }}</span>
-                </span>
-                <span class="text-sm text-sky-100 transition group-hover:translate-x-1">
-                  {{ link.label === 'Email' ? 'Compose' : link.label === 'Phone' ? 'Call' : 'Open' }}
-                </span>
-              </a>
+              <h3 class="font-heading text-3xl font-semibold">Let&apos;s collaborate</h3>
+              <p class="mt-2 max-w-lg text-sm leading-7 text-slate-300">
+                Available for internships, collaborations, and engineering opportunities.
+              </p>
+
+              <div class="mt-7 rounded-[1.4rem] border border-white/10 bg-white/5 p-5">
+                <p class="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">Quick contact</p>
+                <div class="mt-4 space-y-2 text-sm leading-7 text-slate-200">
+                  <p>Email: nameharshraj@gmail.com</p>
+                  <p>Phone: +91 7992336832</p>
+                  <p>Location: Punjab, India</p>
+                </div>
+              </div>
+
+              <div class="mt-7 flex flex-wrap gap-4">
+                <a
+                  *ngFor="let link of content().contactLinks"
+                  [href]="contactHref(link)"
+                  [attr.target]="contactTarget(link)"
+                  rel="noreferrer"
+                  class="contact-link-card group inline-flex h-16 w-16 items-center justify-center rounded-full border border-white/16 bg-white/5 text-xl backdrop-blur transition hover:-translate-y-1 hover:border-violet-400 hover:bg-white/10"
+                  [attr.aria-label]="link.label"
+                  [title]="link.label"
+                >
+                  {{ contactIcon(link.label) }}
+                </a>
+              </div>
+
+              <div class="mt-auto pt-8">
+                <p class="text-sm font-semibold text-slate-200">Resume</p>
+                <a
+                  [href]="content().hero.cvUrl"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="mt-3 inline-flex w-full items-center justify-center rounded-[1rem] border border-white/16 bg-white/5 px-5 py-4 text-base font-semibold text-white transition hover:-translate-y-1 hover:border-violet-400 hover:bg-white/10"
+                >
+                  Download PDF
+                </a>
               </div>
             </div>
           </div>
